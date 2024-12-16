@@ -5,6 +5,8 @@
 # Script version 1.0
 # First version Date: 14-December-2024
 #
+# This project was originally a fork from nusantara's project T-Guard.
+#
 # This script is meant to help new IT professionals with basic Linux knowledge, to setup their own Open Source Security Operations Center.
 # These are the capabilities that are included in this script:
 # - TheHive for Incident Management
