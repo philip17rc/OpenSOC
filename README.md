@@ -14,6 +14,12 @@ This script is intended for IT technicians looking to streamline the deployment 
 - 🗂️ MISP: Your own Cyber Threat Intelligence platform.
 
 
+See how it works here:
+
+[![IMAGE ALT TEXT](http://img.youtube.com/vi/N1ylCzaRsMg/0.jpg)](https://youtu.be/N1ylCzaRsMg "Github - OpenSOC Project (TheHive, Cortex, WAZUH and MISP)")
+
+
+
 ***If you have a personalized digital certificate, it will also help you deploy that certificate to TheHive.***
 
 
@@ -38,7 +44,25 @@ WAZUH: admin:P+sswordCyber2025
 MISP: 443 - admin@admin.test:(generated during setup)
 
 
+
+
 **Warning**
 It is recommended to run this script in a virtual machine and take a snapshot of the VM before running it.
 
+
+
+
+***Trouble Shooting MISP installation***
+
+If you get a few errors during the MISP installation process, exit the script and run the following commands:
+- pecl uninstall brotli simdjson zstd
+- rm -rf /var/www/MISP /var/www/.cache
+- mysql -u root -e "DROP DATABASE misp;"
+- mysql -u root -e "DROP USER 'misp'@'localhost';"
+- mysql -u root -e "FLUSH PRIVILEGES;"
+
+
+In case the password for MISP doesn't show up, please run the following command to generate a new password for the default user account:
+
+- /var/www/MISP/app/Console/cake user change_pw admin@admin.test P+sswordCyber2025
 
