@@ -171,7 +171,7 @@ while true; do
 		clear
 		;;
 	8)
-		whiptail --title "TheHive certificate" --msgbox "Make sure thehive certificate has the following names:\nthehive.crt and thehive.key respectively.\nIn the next menu indicate the directory where the certificates are located." 50 30
+		whiptail --title "TheHive certificate" --msgbox "Make sure thehive certificate has the following names:\nthehive.crt and thehive.key respectively.\nIn the next menu indicate the directory where the certificates are located." 20 30
 		read -p "Insert the directory where the certificates are: " cert_dir
 		openssl pkcs12 -export -in $cert_dir/thehive.crt -inkey $cert_dir/thehive.key -out $cert_dir/thehive.p12 -name thehive
 		keytool -importkeystore -srckeystore $cert_dir/thehive.p12 -srcstoretype PKCS12 -destkeystore $cert_dir/thehive.jks -deststoretype JKS
@@ -192,7 +192,7 @@ while true; do
 		Cortex: 9001 - (setup by the user during first login)\n
 		Wazuh: 9443 - admin:P+sswordCyber2025\n
 		MISP: 443 - admin@admin.test:(generated during setup)\n"
-        whiptail --title "Information" --msgbox "$message"  20 80
+        whiptail --title "Information" --msgbox "$message"  30 80
 		;;
     
 esac
