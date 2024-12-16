@@ -19,13 +19,13 @@ This script is intended for IT technicians looking to streamline the deployment 
 
 After installing everything, these are the ports used by each application:
 
-TheHive: 9000 - http://<IP>:9000  | if SSL is enabled:  https://<IP>:7443
+TheHive: 9000 - http://\<IP\>:9000  | if SSL is enabled:  https://\<IP\>:7443
 
-Cortex: 9001 - http://<IP>:9001
+Cortex: 9001 - http://\<IP\>:9001
 
-Wazuh: 9443 - https://<IP>:9443
+Wazuh: 9443 - https://\<IP\>:9443
 
-MISP: 443 - https://<IP>
+MISP: 443 - https://\<IP\>
 
 ***These are the credentials made available after the Installation:***
 
