@@ -41,12 +41,13 @@ See how it works here:
 After installing everything, these are the ports and credentials used by each application:
 
 
-| Service  |              Endpoint                   |      Username      |      Password           |
-| -------- | --------------------------------------- | ------------------ | ----------------------- |
-| TheHive  | `http://$IP:9000` or `https://$IP:7443` |     admin          |          secret         |
-| Cortex   | `http://$IP:9001`                       |            (setup at first loggin)           |
-| Wazuh    | `https://$IP:9443`                      |     admin          |  P+sswordCyber2025      |
-| MISP     | `https://$IP:443`                       |  admin@admin.test  | (setup at first loggin) |
+|  Service  |              Endpoint                   |      Username      |      Password           |
+| --------- | --------------------------------------- | ------------------ | ----------------------- |
+| Portainer | `http://$IP:9111`                       |            (setup at first loggin)
+| TheHive   | `http://$IP:9000` or `https://$IP:7443` |     admin          |          secret         |
+| Cortex    | `http://$IP:9001`                       |            (setup at first loggin)           |
+| Wazuh     | `https://$IP:9443`                      |     admin          |  P+sswordCyber2025      |
+| MISP      | `https://$IP:443`                       |  admin@admin.test  | (setup at first loggin) |
 
 
 ***The above credentials are made available after the Installation:***
