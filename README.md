@@ -19,40 +19,47 @@ See how it works here:
 [![IMAGE ALT TEXT](http://img.youtube.com/vi/N1ylCzaRsMg/0.jpg)](https://youtu.be/N1ylCzaRsMg "Github - OpenSOC Project (TheHive, Cortex, WAZUH and MISP)")
 
 
+# Installation:
+
+## Check if installed as it will be needed.
+```
+# sudo apt-get update
+# sudo apt-get install wget whiptail -y
+```
+
+## Download and run
+```
+# wget https://raw.githubusercontent.com/philip17rc/OpenSOC/refs/heads/main/setup.sh
+# chmod +x setup.sh
+# sudo bash setup.sh
+```
+
+## Post-Installation 
 
 ***If you have a personalized digital certificate, it will also help you deploy that certificate to TheHive.***
 
+After installing everything, these are the ports and credentials used by each application:
 
-After installing everything, these are the ports used by each application:
 
-TheHive: 9000 - http://\<IP\>:9000  | if SSL is enabled:  https://\<IP\>:7443
+| Service  |              Endpoint                   |      Username      |      Password           |
+| -------- | --------------------------------------- | ------------------ | ----------------------- |
+| TheHive  | `http://$IP:9000` or `https://$IP:7443` |     admin          |          secret         |
+| Cortex   | `http://$IP:9001`                       |            (setup at first loggin)           |
+| Wazuh    | `https://$IP:9443`                      |     admin          |  P+sswordCyber2025      |
+| MISP     | `https://$IP:443`                       |  admin@admin.test  | (setup at first loggin) |
 
-Cortex: 9001 - http://\<IP\>:9001
 
-Wazuh: 9443 - https://\<IP\>:9443
-
-MISP: 443 - https://\<IP\>
-
-***These are the credentials made available after the Installation:***
-
-TheHive: admin:secret
-
-Cortex: (setup by the user during first login)
-
-WAZUH: admin:P+sswordCyber2025		
-		
-MISP: 443 - admin@admin.test:(generated during setup)
+***The above credentials are made available after the Installation:***
 
 
 
-
-**Warning**
+** Warning **
 It is recommended to run this script in a virtual machine and take a snapshot of the VM before running it.
 
 
 
 
-***Trouble Shooting MISP installation***
+## Trouble Shooting MISP installation***
 
 If you get a few errors during the MISP installation process, exit the script and run the following commands:
 - pecl uninstall brotli simdjson zstd
